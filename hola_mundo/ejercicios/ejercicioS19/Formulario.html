@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM, Eventos y Funciones</title>
+	<script type="text/javascript" src="ejerciciodom.js"></script>
+	<style>
+		#cajaFormulario,#cajaResultado{
+			width: 250px;
+			float: left;
+			margin: 10px;
+			padding: 10px;
+			border: 3px solid black ;
+		};
+		#cajaResultado{
+			width: 250px;
+			float: center;
+			margin: 10px;
+			padding: 20px;
+			border: 3px dashed red ;
+			
+		}
+		#cajaResultado.h3{
+			text-align: right;
+		}
+
+
+	</style>
+</head>
+<body>
+<!-- 1) Formulario con los campos : Nombres, apellidos y edad
+	 2) Boton de enviar formulario (submit)
+	 3) Mostrar datos por pantalla
+	 4) Validacion de formulario
+-->
+<h1>Ejercicio DOM, Eventos y Funciones</h1>
+<h2>Svassallo</h2>
+<hr>
+<div id="cajaFormulario"> 
+	<form action="" method="POST" id="formulario" onsubmit="return false ">
+	
+		<label for  ="nombre">Nombre:</label> <br>
+		<input type ="text" id="nombre" name="nombre"> <br>
+		<label for  ="apellidos">Apellidos: </label> <br>
+		<input type ="text" id="apellidos" name="apellidos"><br>
+		<label for  ="edad">Edad:</label><br>
+		<input type ="number" id="edad" name="edad"><br>
+	
+		<input type ="submit" value="enviar" id="submit">
+	
+	</form>
+</div >
+
+<div id="cajaResultado">
+
+<h3 >Resultado</h3> <hr>
+	<p ">Nombre: <span id="l_nombre"></span> </p>
+	<p >Apellido: <span id="l_apellido"></span> </p>
+	<p >Edad: <span id="l_edad"></span></p>
+
+</div>	
+
+</body>
+</html>
